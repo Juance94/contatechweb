@@ -182,7 +182,7 @@ div li a:active {
     object-fit: cover;
     width: 30%;
     height: 220px;
-    box-shadow: 0 0 40px rgba(56, 133, 66, 0.5);
+    box-shadow: 0 0 40px rgba(19, 91, 28, 0.5);
     margin-bottom: var(--marginElementos);
 }
 
