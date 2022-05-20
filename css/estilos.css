@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition-delay: 2s;
+}
+
+:root{
+    --COLORTEXTONUEVO: rgb(255, 0, 242);
+    --colorTextos: rgb(0, 0, 0);
+    --colorBotones: RED;
+    --colorFondo: #46b2e4;
+    --paddingSecciones: 40px 0;
+    --marginElementos: 40px;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: var(--paddingSecciones);
+}
+
+.beneficiocontenedor {
+    height: 800px;
+}
+
+/* Menu */
+
+.menu-navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: lightblue;
+    position: fixed;
+    right: 0;
+    padding: 20px;
+    border: black solid 5px;
+    z-index: 2000;
+}
+
+.logo{
+    height: 50px;
+
+}
+
+.logo img{
+    display: block;
+    height: 100%;
+}
+
+.enlaces li{
+    list-style: none;
+    display: inline-block;
+}
+
+.enlaces a{
+    color:var(--colorFondo);
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+div li a:hover{
+    color: var(--colorBotones);
+}
+
+div li a:active {
+    background-color: darkblue;
+}
+
+/* Hero */
+
+.hero{
+    height: 500px;
+    background-image: url("../img/lauren-gray-ib2pdxr8fy0-unsplash_0.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contenedor-textos{
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--COLORTEXTONUEVO);
+    text-align: center;
+
+}
+
+.hero h1{
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.hero p{
+    font-weight: 700;
+    font-size: 25px;
+    margin: 15px 0;
+    align-self: center;
+}
+
+.btn{
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 0;
+    /*background: var(--colorBotones);*/
+    border-radius: 10px;
+    transition: all 500ms cubic-bezier(.17,.67,1,.14);
+
+}
+
+.btn:hover {
+    background-color: rgb(0, 255, 106);
+    transform: scale(1.2) translateX(15px);
+}
+
+/* Main */
+
+.titulo-seccion{
+    text-align: center;
+    font-size: 35px;
+    color: var(--colorFondo);
+}
+
+.copy{
+    text-align: center;
+    color: var(--colorTextos);
+    margin: 20px 0;
+}
+
+.beneficios{
+    padding-top: var(--marginElementos);
+    height: 200px;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 120% 120%;
+    grid-gap: 10%;
+}
+
+.beneficio{
+    display: inline-block;
+    font-size: 20px;
+    height: 150px;
+    text-align: center;
+    /*width: 40%;*/
+    background-image: url("../img/lauren-gray-ib2pdxr8fy0-unsplash_0.jpg");
+    background-position: center;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.beneficio h3 {
+    align-self: center;
+    align-content: center;
+    padding-top: 3rem;
+}
+
+.slide {
+    height: 500px;
+    width: 800px;
+    margin: 20px auto;
+}
+
+
+.projects{
+    background: rgb(0, 0, 0);
+}
+
+.contenedor-imagenes img{
+    display: block;
+    object-fit: cover;
+    width: 30%;
+    height: 220px;
+    box-shadow: 0 0 40px rgba(56, 133, 66, 0.5);
+    margin-bottom: var(--marginElementos);
+}
+
+.verde{
+    color: #7de962;
+}
+
+.people{
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.person{
+    font-size: 22px;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+footer{
+    background-image: url("../img/lauren-gray-ib2pdxr8fy0-unsplash_0.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+footer .titulo-seccion,
+footer .copy{
+    color: var(--colorBotones);
+}
+
+.redes-sociales{
+    padding-top: var(--marginElementos);
+    width: 80%;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    
+}
+
+
+.redes-sociales i{
+    font-size: 60px;
+    color: var(--colorBotones);
+}
+
+@media screen and (max-width:800px){
+    .menu-navegacion{
+        height: 120px;
+        justify-content: space-evenly;
+        z-index: 1000;
+    }
+
+    .hero h1{
+        font-size: 38px;
+    }
+
+    .beneficio{
+        margin-bottom: var(--marginElementos);
+    }
+
+
+    .redes-sociales{
+        align-items: center;
+    }
+    
+    .redes-sociales i{
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:400px){
+
+    .menu-navegacion{
+        flex-direction: column;
+        height: 150px;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        z-index: 1000;
+    }
+
+    .hero h1{
+        font-size: 15px;
+        margin-top: 10rem;
+    }
+    
+    .enlaces li{
+        list-style: none;
+        display: inline-block;
+        text-align: center;
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+
+    .beneficios{
+        display: grid;
+        grid-template-columns: 90%;
+        grid-gap: 10%;
+    }
+    
+}
